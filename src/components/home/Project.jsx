@@ -49,7 +49,8 @@ export default function Project() {
   return (
     <section
       className="flex max-w-screen items-center justify-center flex-wrap m-6 gap-6
-    lg:flex-row"
+    lg:flex-row 
+    md:items-start md:justify-between"
     >
       <div
         className="w-4/6

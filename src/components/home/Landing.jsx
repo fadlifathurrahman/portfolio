@@ -2,6 +2,10 @@ import { useContext } from "react";
 import BackgroundS2 from "/batik-fill-2.png";
 import { ThemeContext } from "../../App";
 
+// const myName = document.querySelector("#landing"); // elemen teratas halaman
+// const backToTopButton = document.querySelector("#back-to-top-button");
+// backToTopButton.onclick = () => input.scrollIntoView({ behavior: "smooth" });
+
 export default function Landing() {
   const { theme } = useContext(ThemeContext);
   return (
@@ -22,6 +26,7 @@ export default function Landing() {
       "
       >
         <article
+          id="landing"
           className="bg-contain bg-right hidden
         sm:inline"
         >

@@ -1,9 +1,13 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { ThemeContext } from "../App";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 export default function ThemeButton() {
   const { theme, setTheme } = useContext(ThemeContext);
+
+  useEffect(() => {
+    theme === "dark" ? console.log("Dark mode") : console.log("Bright mode");
+  }, [theme]);
 
   return (
     <button
