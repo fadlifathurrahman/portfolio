@@ -15,7 +15,7 @@ export default function Contact() {
     {
       id: 2,
       icon: <BsLinkedin size={20} />,
-      link: "https://www.linkedin.com/in/muhammad-fadli-fathurrahman-21a297217/",
+      link: "https://www.linkedin.com/in/muhammad-fadli-fathurrahman-373118298/",
     },
     {
       id: 3,
