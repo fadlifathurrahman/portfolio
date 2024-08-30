@@ -38,23 +38,27 @@ export default function Header() {
       {/* end name container */}
 
       {/* navbar container */}
-      <nav>
-        <ul
-          className={`flex flex-row items-center content-center 
-            sm:text-md
-            md:text-lg
-            lg:text-2xl
-          `}
-        >
+      <nav
+        className="hidden
+            lg:flex
+      "
+      >
+        <ul className={`flex flex-row items-center content-center`}>
           <li
-            className={`text-lg mx-2 px-3 py-1 rounded-md
+            className={`mx-2 px-3 py-1 rounded-md
+            sm:text-xs
+            md:text-sm
+            lg:text-md
             ${scroll ? "hover:bg-white" : "hover:bg-cyan-700"}`}
           >
             <a href="#today-i-learn"> Today I Learn </a>
           </li>
 
           <li
-            className={`text-lg mx-2 px-3 py-1 rounded-md
+            className={`mx-2 px-3 py-1 rounded-md
+            sm:text-xs
+            md:text-sm
+            lg:text-md
             ${scroll ? "hover:bg-white" : "hover:bg-cyan-700"}`}
           >
             {" "}
@@ -62,11 +66,13 @@ export default function Header() {
           </li>
 
           <li
-            className={`text-lg mx-2 px-3 py-1 rounded-md
+            className={`mx-2 px-3 py-1 rounded-md
+            sm:text-xs
+            md:text-sm
+            lg:text-md
             ${scroll ? "hover:bg-white" : "hover:bg-cyan-700"}`}
           >
-            {" "}
-            <a href="#contact"> Contact </a>
+            <a href="#contact">Contact</a>
           </li>
         </ul>
       </nav>
