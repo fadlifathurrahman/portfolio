@@ -43,7 +43,7 @@ export default function Organisation() {
       >
         <div className="flex items-center gap-3">
           <FaPeopleGroup className="text-cyan-600" size={28} />
-          <p className="font-bold  text-xl lg:text-2xl">Organisation</p>
+          <p className="font-bold  text-xl lg:text-2xl">Organization</p>
         </div>
         {/* show or hide organisation content */}
         {showOrganisation ? (
@@ -56,7 +56,7 @@ export default function Organisation() {
 
       {showOrganisation && (
         // show organisation content
-        <div className="text-cyan-800 bg-slate-100 p-4 rounded-lg mt-3">
+        <div className="text-cyan-800 bg-slate-200 p-4 rounded-lg mt-3">
           {/* organisation title */}
           <div className="flex items-center gap-3 mb-4">
             <PiChalkboardTeacher className="text-cyan-600" size={28} />
@@ -93,7 +93,7 @@ export default function Organisation() {
           >
             <button className="flex items-center gap-3 bg-slate-700 text-white p-3 rounded-md hover:bg-slate-600">
               <FaGoogleDrive />
-              View all certificates
+              View certificates
             </button>
           </a>
         </div>

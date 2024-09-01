@@ -147,7 +147,7 @@ export default function Education() {
             >
               <button className="flex items-center gap-3 bg-slate-700 text-white p-3 rounded-md hover:bg-slate-600">
                 <FaGoogleDrive />
-                View all programming courses certificates
+                View certificates
               </button>
             </a>
           </div>
