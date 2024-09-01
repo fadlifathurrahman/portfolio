@@ -6,7 +6,6 @@ export default function Footer() {
       className="flex flex-col max-w-screen items-center justify-center p-5
     bg-slate-900"
     >
-      <Contact />
       <p
         className="text-white text-sm 
       md:text-lg

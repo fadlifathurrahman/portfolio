@@ -32,6 +32,7 @@ export const myExpertise = [
 
 export default function Expertise() {
   return (
+    // parent container
     <section id="today-i-learn" className="flex-col justify-between p-4 mt-20">
       {/* title container */}
       <article

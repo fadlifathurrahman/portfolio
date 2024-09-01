@@ -68,7 +68,6 @@ export default function Project() {
   ];
 
   return (
-    // parent project container
     <section id="project" className="min-h-screen flex-col justify-between p-4">
       {/* title container */}
       <article
@@ -77,120 +76,69 @@ export default function Project() {
           md:text-1xl
           sm:text-1xl"
       >
-        Current Project
+        Projects
       </article>
-      {/* end title container */}
 
       {/* projects main container */}
-      <article className="flex flex-wrap pt-5  gap-8 justify-center">
+      <article className="flex flex-wrap pt-5 gap-6 justify-center">
         {myProject.map((project) => (
-          // project iteration container
           <div
             key={project.name}
-            className="bg-slate-300 flex flex-col justify-between w-1/4 px-6 py-4 gap-y-3"
+            className="bg-slate-300 flex flex-col justify-between w-full sm:w-2/5 lg:w-1/4 px-4 py-4 gap-y-3 rounded-lg shadow-md"
           >
-            {/* project name & view container */}
             <div className="flex flex-col gap-4">
-              {/* project name container */}
-              <p
-                className="text-xl font-bold text-center
-                max-lg:text-[1rem]
-                max-md:text-[0.8rem]"
-              >
-                {project.name}
-              </p>
-              {/* end project name container */}
-
-              {/* project view container */}
+              <p className="text-lg font-bold text-center">{project.name}</p>
               <img
                 src={project.view}
-                className="w-full h-40 rounded-t-sm"
-              ></img>
-              {/* end project view container */}
+                className="w-full rounded-t-sm object-contain"
+              />
             </div>
-            {/* end project name & view container */}
+            <p className="text-justify font-mono text-sm">{project.desc}</p>
 
-            {/* project desc container */}
-            <p
-              className="text-justify font-mono
-                max-lg:text-[0.7rem]
-                max-md:text-[0.5rem]"
-            >
-              {project.desc}
-            </p>
-            {/* end project desc container */}
-
-            {/* project expertise container */}
             <div className="flex flex-wrap gap-2 justify-center bg-slate-50 py-2 rounded-lg">
               {project.expertise.map((expertise) => (
                 <div
                   key={myExpertise[expertise - 1].name}
-                  className="flex items-center rounded-lg 
-                  min-w-max gap-2 py-2 px-3
-                 bg-slate-300 "
+                  className="flex items-center rounded-lg min-w-max gap-2 py-2 px-3 bg-slate-300"
                 >
-                  {/* expertise icon */}
                   <img
                     src={myExpertise[expertise - 1].icon}
                     className="h-4"
                   ></img>
-                  {/* end expertise icon */}
-
-                  {/* expertise name */}
                   <p className="text-xs">{myExpertise[expertise - 1].name}</p>
-                  {/* end expertise name */}
                 </div>
               ))}
             </div>
 
-            {/* project button container */}
             <div className="flex justify-around w-full">
-              {/* github button container */}
               {project.githubUrl && (
                 <Link
                   to={project.githubUrl}
                   target="_blank"
-                  className="text-cyan-700
-                max-lg:text-[0.7rem]
-                max-md:text-[0.5rem]"
+                  className="text-cyan-700"
                 >
-                  <button
-                    className="bg-sky-800 text-white py-2 w-[100px] rounded-md flex items-center justify-center gap-x-2
-                  hover:bg-sky-600"
-                  >
+                  <button className="bg-sky-800 text-white py-2 w-[100px] rounded-md flex items-center justify-center gap-x-2 hover:bg-sky-600">
                     <BsGithub />
                     <p>Github</p>
                   </button>
                 </Link>
               )}
-              {/* end github buttons container */}
-
-              {/* demo button container */}
               {project.demoUrl && (
                 <Link
                   to={project.demoUrl}
                   target="_blank"
-                  className="text-cyan-700
-                  max-lg:text-[0.7rem]
-                  max-md:text-[0.5rem]"
+                  className="text-cyan-700"
                 >
-                  <button
-                    className="bg-sky-800 text-white py-2 w-[90px] rounded-md flex items-center justify-center gap-x-2
-                  hover:bg-sky-600"
-                  >
+                  <button className="bg-sky-800 text-white py-2 w-[90px] rounded-md flex items-center justify-center gap-x-2 hover:bg-sky-600">
                     <MdPageview className="w-5" />
                     <p>Demo</p>
                   </button>
                 </Link>
               )}
-              {/* end demo button container */}
             </div>
-            {/*end project buttons container */}
           </div>
         ))}
       </article>
-      {/* end projects main container */}
     </section>
-    // end parent project container
   );
 }
