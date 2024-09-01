@@ -34,11 +34,7 @@ export default function Header() {
           md:text-lg
           lg:text-2xl`}
         >
-          <img
-            className="w-10 h-10 mr-2"
-            src={whiteLogo}
-            alt=""
-          />
+          <img className="w-10 h-10 mr-2" src={whiteLogo} alt="" />
           <p>Muhammad Fadli Fathurrahman_</p>
         </div>
         {/* end name container */}
@@ -52,7 +48,11 @@ export default function Header() {
               sm:text-xs
               md:text-sm
               lg:text-md
-              ${scroll ? "hover:bg-white hover:text-slate-900" : "hover:bg-cyan-700"}`}
+              ${
+                scroll
+                  ? "hover:bg-white hover:text-slate-900"
+                  : "hover:bg-cyan-700"
+              }`}
           >
             <a href="#about-me">About Me</a>
           </li>
@@ -61,7 +61,11 @@ export default function Header() {
               sm:text-xs
               md:text-sm
               lg:text-md
-              ${scroll ? "hover:bg-white hover:text-slate-900" : "hover:bg-cyan-700"}`}
+              ${
+                scroll
+                  ? "hover:bg-white hover:text-slate-900"
+                  : "hover:bg-cyan-700"
+              }`}
           >
             <a href="#today-i-learn">Today I Learn</a>
           </li>
@@ -70,7 +74,11 @@ export default function Header() {
               sm:text-xs
               md:text-sm
               lg:text-md
-              ${scroll ? "hover:bg-white hover:text-slate-900" : "hover:bg-cyan-700"}`}
+              ${
+                scroll
+                  ? "hover:bg-white hover:text-slate-900"
+                  : "hover:bg-cyan-700"
+              }`}
           >
             <a href="#project">Project</a>
           </li>
@@ -79,7 +87,11 @@ export default function Header() {
               sm:text-xs
               md:text-sm
               lg:text-md
-              ${scroll ? "hover:bg-white hover:text-slate-900" : "hover:bg-cyan-700"}`}
+              ${
+                scroll
+                  ? "hover:bg-white hover:text-slate-900"
+                  : "hover:bg-cyan-700"
+              }`}
           >
             <a href="#top">Contact</a>
           </li>
@@ -97,10 +109,13 @@ export default function Header() {
       {/* mobile navbar */}
       <nav
         className={`${navOpen ? "block" : "hidden"} 
-        ${scroll ? "top-16 " : " "}
-        absolute top-20 left-0 w-full bg-slate-800 text-white lg:hidden z-40 shadow-xl`}
+        ${scroll ? " top-16 " : " top-20 "}
+        absolute left-0 w-full bg-slate-800 text-white lg:hidden z-40 shadow-xl`}
       >
         <ul className="flex flex-col items-center">
+          <li className={`px-4 py-3 w-full text-center hover:bg-cyan-700`}>
+            <a href="#about-me">About Me</a>
+          </li>
           <li className={`px-4 py-3 w-full text-center hover:bg-cyan-700`}>
             <a href="#today-i-learn" onClick={toggleNav} className="">
               Today I Learn
