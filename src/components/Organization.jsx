@@ -97,7 +97,9 @@ export default function Organisation() {
             </button>
           </a>
         </div>
+        // end of organisation content
       )}
     </article>
+    // end of parent container
   );
 }

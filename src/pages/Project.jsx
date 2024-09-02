@@ -8,6 +8,7 @@ import tiketGo from "/assets/images/project-view/tiketgo.png";
 import berkahMart from "/assets/images/project-view/berkah-mart.png";
 import integerStore from "/assets/images/project-view/integer-store.png";
 import carubanTourism from "/assets/images/project-view/caruban-tourism.png";
+import project from "/assets/images/title-icons/project.png";
 
 export default function Project() {
   const myProject = [
@@ -68,30 +69,48 @@ export default function Project() {
   ];
 
   return (
+    // parent container
     <section id="project" className="min-h-screen flex-col justify-between p-4">
-      {/* title container */}
-      <article className="text-white text-2xl bg-cyan-950 bg-opacity-70 p-4 font-semibold
-      md:text-3xl
-      lg:text-4xl">
-        Projects
+      {/* header container */}
+      <article className="flex items-end gap-5 bg-slate-300 bg-opacity-100 px-4 py-3">
+        <img
+          className="w-16 -mt-16
+        md:w-20"
+          src={project}
+          alt=""
+        />
+        <p
+          className="text-slate-800 font-bold text-3xl md:text-3xl
+      lg:text-4xl"
+        >
+          Projects
+        </p>
       </article>
+      {/* end header container */}
 
-      {/* projects main container */}
+      {/* content container */}
       <article className="flex flex-wrap pt-5 gap-6 justify-center">
+        {/* project iterator */}
         {myProject.map((project) => (
           <div
             key={project.name}
             className="bg-slate-300 flex flex-col justify-between w-full sm:w-2/5 lg:w-1/4 px-4 py-4 gap-y-3 rounded-lg shadow-md"
           >
             <div className="flex flex-col gap-4">
+              {/* project name */}
               <p className="text-lg font-bold text-center">{project.name}</p>
+
+              {/* project image */}
               <img
                 src={project.view}
                 className="w-full rounded-t-sm object-contain"
               />
             </div>
+
+            {/* project description */}
             <p className="text-justify font-mono text-sm">{project.desc}</p>
 
+            {/* project expertise list with iterator */}
             <div className="flex flex-wrap gap-2 justify-center bg-slate-50 py-2 rounded-lg">
               {project.expertise.map((expertise) => (
                 <div
@@ -106,7 +125,9 @@ export default function Project() {
                 </div>
               ))}
             </div>
+            {/* end project expertise list */}
 
+            {/* github & demo button */}
             <div className="flex justify-around w-full">
               {project.githubUrl && (
                 <Link
@@ -133,9 +154,13 @@ export default function Project() {
                 </Link>
               )}
             </div>
+            {/* end github & demo button */}
           </div>
         ))}
+        {/* end project iterator */}
       </article>
+      {/* end content container */}
     </section>
+    // end parent container
   );
 }

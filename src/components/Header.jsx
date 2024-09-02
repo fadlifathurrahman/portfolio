@@ -6,10 +6,14 @@ import { FaComputer } from "react-icons/fa6";
 import { MdOutlineTouchApp } from "react-icons/md";
 import { RiContactsLine } from "react-icons/ri";
 import { MdOutlineEmail } from "react-icons/md";
+import { RiArrowDropDownLine, RiArrowDropUpLine } from "react-icons/ri";
+import english from "/assets/images/english.png";
+import indonesian from "/assets/images/indonesia.png";
 
 export default function Header() {
   const [scroll, setScroll] = useState(false);
   const [navOpen, setNavOpen] = useState(false);
+  const [resumeOpen, setResumeOpen] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -21,6 +25,10 @@ export default function Header() {
     setNavOpen(!navOpen);
   };
 
+  const toggleResume = () => {
+    setResumeOpen(!resumeOpen);
+  };
+
   return (
     // parent container
     <header
@@ -30,8 +38,9 @@ export default function Header() {
         flex items-center justify-between px-6 sticky top-0 transition duration-300 ease-in-out
         shadow-xl`}
     >
+      {/* hamburger & logo container */}
       <article className="flex gap-7">
-        {/* hamburger menu */}
+        {/* hamburger button */}
         <div className="">
           <button
             onClick={toggleNav}
@@ -40,7 +49,9 @@ export default function Header() {
             {navOpen ? <FaTimes /> : <FaBars />}
           </button>
         </div>
+        {/* end hamburger button */}
 
+        {/* menu container */}
         <nav
           className={`${navOpen ? "block" : "hidden"} 
         ${scroll ? " top-16 " : " top-20 "}
@@ -88,33 +99,75 @@ export default function Header() {
               Get in Touch
             </a>
           </div>
+          {/* end menu container */}
         </nav>
-        {/* end hamburger menu */}
+        {/* end hamburger container */}
 
+        {/* logo container */}
         <a href="#top">
           {/* name container */}
-          <div
-            className={`text-sm flex items-center font-semibold 
-          sm:text-md
-          md:text-lg
-          lg:text-2xl`}
-          >
-            <img className="w-10 h-10 mr-2" src={whiteLogo} alt="" />
-            <p>Fadli_</p>
+          <div className={`text-sm flex items-center font-semibold`}>
+            <img
+              className="w-8 mr-2
+            md:w-10"
+              src={whiteLogo}
+              alt=""
+            />
+            <p
+              className="text-xl
+              md:text-2xl
+              lg:text-3xl"
+            >
+              Fadli_
+            </p>
           </div>
-          {/* end name container */}
         </a>
+        {/* end logo container */}
       </article>
+      {/* end hamburger & logo container */}
 
-      <a
-        href="https://drive.google.com/file/d/1P-OxtP7xyIfDTduFpWAmJINFdVi9SWXV/view?usp=sharing"
-        target="_blank"
-        className="flex items-center gap-2 h-full px-4
-      hover:bg-slate-200 hover:text-slate-800"
-      >
-        <BsPersonVcard size={24} />
-        <p className="text-xl">Resume</p>
-      </a>
+      {/* resume container */}
+      <div className="relative">
+        <button
+          onClick={toggleResume}
+          className={`flex items-center gap-2 h-full px-4 py-3 hover:bg-slate-200 hover:text-slate-800
+          ${
+            resumeOpen ? "bg-white text-slate-800" : "rounded-br-lg"
+          } rounded-t-lg rounded-bl-lg`}
+        >
+          <BsPersonVcard size={24} />
+          <p className="text-xl">Resume</p>
+          {resumeOpen ? (
+            <RiArrowDropUpLine size={24} />
+          ) : (
+            <RiArrowDropDownLine size={24} />
+          )}
+        </button>
+
+        {/* language container */}
+        {resumeOpen && (
+          <div className="absolute right-0 w-max bg-white shadow-lg z-50">
+            <a
+              href="https://drive.google.com/file/d/1P-OxtP7xyIfDTduFpWAmJINFdVi9SWXV/view?usp=sharing"
+              target="_blank"
+              className="px-4 py-2 flex items-center border-y-2 text-gray-800 hover:bg-gray-200"
+            >
+              <img src={english} className="w-6 mr-2" />
+              English
+            </a>
+            <a
+              href="https://drive.google.com/file/d/1P-OxtP7xyIfDTduFpWAmJINFdVi9SWXV/view?usp=sharing"
+              target="_blank"
+              className="px-4 py-2 flex items-center text-gray-800 hover:bg-gray-200"
+            >
+              <img src={indonesian} className="w-6 mr-2" />
+              Indonesian
+            </a>
+          </div>
+          // end language container
+        )}
+      </div>
+      {/* end resume container */}
     </header>
     // end parent container
   );

@@ -7,29 +7,27 @@ export default function Contact() {
     {
       id: 1,
       icon: <BsGithub size={24} />,
-      username:"fadlifathurrahman",
+      username: "fadlifathurrahman",
       link: "https://github.com/fadlifathurrahman",
     },
     {
       id: 2,
       icon: <BsLinkedin size={24} />,
-      username:"fadli-ft",
+      username: "fadli-ft",
       link: "https://www.linkedin.com/in/fadli-ft/",
     },
     {
       id: 3,
       icon: <AiFillInstagram size={24} />,
       link: "https://www.instagram.com/fadli.ft/",
-      username:"fadli.ft",
+      username: "fadli.ft",
     },
   ];
 
   return (
-    <div
-      id="contact"
-      className="flex flex-col justify-end w-max 
-       "
-    >
+    // parent container
+    <div id="contact" className="flex flex-col justify-end w-max">
+      {/* contact container */}
       <div className="flex flex-row pt-3 justify-evenly items-end">
         {connection.map((acc) => (
           <Link
@@ -43,6 +41,8 @@ export default function Contact() {
           </Link>
         ))}
       </div>
+      {/* end contact container */}
     </div>
+    // end parent container
   );
 }

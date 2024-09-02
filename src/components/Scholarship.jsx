@@ -11,7 +11,9 @@ export default function Scholarship() {
   const [showScholarship, setShowScholarship] = useState(false);
 
   return (
+    // parent container
     <article className="bg-white shadow-lg h-fit rounded-lg p-5 border">
+      {/* header & show button container */}
       <div
         className="flex items-center justify-between cursor-pointer"
         onClick={() => setShowScholarship(!showScholarship)}
@@ -26,7 +28,9 @@ export default function Scholarship() {
           <BsChevronDown className="text-cyan-600" size={24} />
         )}
       </div>
+      {/* end header & show button container */}
 
+      {/* point container */}
       {showScholarship && (
         <div className="mt-3">
           <p className="text-base lg:text-lg text-justify indent-9">
@@ -64,6 +68,8 @@ export default function Scholarship() {
           </ul>
         </div>
       )}
+      {/* end point container */}
     </article>
+    // end parent container
   );
 }

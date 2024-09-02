@@ -53,39 +53,39 @@ export default function Education() {
   return (
     // parent container
     <article className=" shadow-lg rounded-lg p-4 h-fit border ">
-      {/* education title & show button container */}
+      {/* header & show button container */}
       <div
         className="flex items-center justify-between cursor-pointer"
         onClick={() => setShowEducation(!showEducation)}
       >
-        {/* education title container */}
+        {/* header container */}
         <div className="flex items-center gap-3">
           <PiGraduationCapLight className="text-cyan-600" size={28} />
           <p className="font-bold text-xl lg:text-2xl">Education</p>
         </div>
-        {/* end education title container */}
+        {/* header container */}
 
-        {/* education show button */}
+        {/* show button container */}
         {showEducation ? (
           <BsChevronUp className="text-cyan-600" size={24} />
         ) : (
           <BsChevronDown className="text-cyan-600" size={24} />
         )}
-        {/* end education show button */}
+        {/* end show button container */}
       </div>
-      {/* end education title container */}
+      {/* header & show button container */}
 
       {showEducation && (
         // formal & informal education container
         <div className="bg-slate-200 p-3 rounded-lg mt-3">
           {/* formal education container */}
           <div className="mb-6 bg-white p-4 rounded-lg">
-            {/* formal education title container */}
+            {/* formal education header container */}
             <div className="flex items-center gap-3 mb-2">
               <LiaUniversitySolid className="text-cyan-600" size={24} />
               <p className="font-bold text-lg lg:text-xl">Formal Education</p>
             </div>
-            {/* end formal education title container */}
+            {/* end formal education header container */}
 
             {/* formal education content container */}
             <p className="text-base lg:text-lg text-justify indent-9">
@@ -117,6 +117,8 @@ export default function Education() {
               <p className="font-bold text-lg lg:text-xl">Informal Education</p>
             </div>
             {/* end informal education title container */}
+
+            {/* informal education content container */}
             <p className="text-base lg:text-lg indent-9 text-justify">
               Throughout my scholarship journey, I have participated in several
               programming courses organized by the{" "}
@@ -128,6 +130,9 @@ export default function Education() {
               </a>{" "}
               program, including:
             </p>
+            {/* end informal education content container */}
+
+            {/* informal education list */}
             <ul className="list-none list-inside mt-3 space-y-2 text-base lg:text-lg">
               {informalEducation.map((education) => (
                 <li
@@ -140,6 +145,9 @@ export default function Education() {
                 </li>
               ))}
             </ul>
+            {/* end informal education list */}
+
+            {/* certificate button */}
             <a
               href="https://drive.google.com/drive/folders/1INuC4oaECGPl1GpWyw8fn6l8fWtW5esQ?usp=sharing"
               className="mt-3 flex items-center justify-center w-full text-base lg:text-lg"
@@ -150,8 +158,11 @@ export default function Education() {
                 View certificates
               </button>
             </a>
+            {/* end certificate button */}
           </div>
+          {/* end informal education container */}
         </div>
+        // end formal & informal education container
       )}
     </article>
   );

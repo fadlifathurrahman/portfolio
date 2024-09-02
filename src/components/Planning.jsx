@@ -6,7 +6,9 @@ export default function Planning() {
   const [showPlanning, setShowPlanning] = useState(false);
 
   return (
+    // parent container
     <article className="bg-white shadow-lg rounded-lg h-fit p-5 border text-justify">
+      {/* header container */}
       <div
         className="flex items-center justify-between cursor-pointer"
         onClick={() => setShowPlanning(!showPlanning)}
@@ -23,7 +25,9 @@ export default function Planning() {
           <BsChevronDown className="text-cyan-600" size={24} />
         )}
       </div>
+      {/* end header container */}
 
+      {/* content container */}
       {showPlanning && (
         <div className="text-gray-700">
           <p className="text-base indent-9 lg:text-lg">
@@ -41,6 +45,8 @@ export default function Planning() {
           </p>
         </div>
       )}
+      {/* end content container */}
     </article>
+    // end parent container
   );
 }

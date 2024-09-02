@@ -12,6 +12,7 @@ import javaspringboot from "/assets/images/icons/javaspringboot.png";
 import reactjs from "/assets/images/icons/reactjs.png";
 import tailwindcss from "/assets/images/icons/tailwindcss.png";
 import github from "/assets/images/icons/github.png";
+import computer from "/assets/images/title-icons/computer.png";
 
 export const myExpertise = [
   { id: 1, name: "C", icon: c },
@@ -35,16 +36,20 @@ export default function Expertise() {
     // parent container
     <section id="today-i-learn" className="flex-col justify-between p-4 mt-20">
       {/* header container */}
-      <article
-        className="text-white text-2xl bg-cyan-950 bg-opacity-70 p-4 font-semibold
-      md:text-3xl
+      <article className="flex items-end gap-5 bg-slate-300 bg-opacity-100 px-4 py-3">
+        <img className="w-16 -mt-16
+        md:w-20" src={computer} alt="" />
+        <p
+          className="text-slate-800 font-bold text-3xl md:text-3xl
       lg:text-4xl"
-      >
-        Today I Learn
+        >
+          Expertise
+        </p>
       </article>
+      {/* end header container */}
 
-      {/* expertise container */}
-      <article className="flex flex-wrap justify-around content-center py-8 gap-5">
+      {/* content container */}
+      <article className="flex flex-wrap justify-between content-justif py-8 gap-5">
         {myExpertise.map((expertise) => (
           <div
             key={expertise.name}
@@ -62,6 +67,8 @@ export default function Expertise() {
           </div>
         ))}
       </article>
+      {/* end content container */}
     </section>
+    // end parent container
   );
 }

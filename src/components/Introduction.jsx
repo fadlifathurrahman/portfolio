@@ -10,6 +10,7 @@ export default function Introduction() {
       className="min-h-screen flex flex-col justify-center items-center -mt-8"
       style={{ backgroundImage: `url(${background})`, backgroundSize: "cover" }}
     >
+      {/* salute & picture container */}
       <article className="flex items-center justify-center gap-5 mx-2">
         {/* salute container */}
         <article
@@ -47,6 +48,7 @@ export default function Introduction() {
         </article>
         {/* end picture container */}
       </article>
+      {/* end salute & picture container */}
 
       {/* contact and location container */}
       <article className="flex flex-col w-1/2 items-center mt-3 py-4">
@@ -54,9 +56,9 @@ export default function Introduction() {
 
         {/* location container */}
         <a
-        target="_blank"
-        href="https://maps.app.goo.gl/Ffa1zDjBtvAHuZwo6"
-          className="text-slate-800 font-bold flex gap-3 items-center mt-3 cursor-pointer
+          target="_blank"
+          href="https://maps.app.goo.gl/Ffa1zDjBtvAHuZwo6"
+          className="text-slate-800 font-bold flex gap-3 items-center mt-3 cursor-pointer w-max
         "
         >
           <FaMapLocationDot size={28} />
@@ -64,6 +66,7 @@ export default function Introduction() {
         </a>
         {/* end location container */}
       </article>
+      {/* end contact and location container */}
     </section>
     // end parent container
   );

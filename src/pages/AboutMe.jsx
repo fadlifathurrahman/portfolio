@@ -2,18 +2,22 @@ import Education from "../components/Education";
 import Scholarship from "../components/Scholarship";
 import Planning from "../components/Planning";
 import Organization from "../components/Organization";
+import aboutMe from "/assets/images/title-icons/about-me.png";
 
 export default function AboutMe() {
   return (
     // parent container
     <section id="about-me" className="p-4 pt-20">
       {/* header container */}
-      <article
-        className="text-white text-2xl bg-cyan-950 bg-opacity-70 p-4 font-semibold
-      md:text-3xl
+      <article className="flex items-end gap-5 bg-slate-300 bg-opacity-100 px-4 py-3">
+        <img className="w-16 -mt-16
+        md:w-20" src={aboutMe} alt="" />
+        <p
+          className="text-slate-800 font-bold text-3xl md:text-3xl
       lg:text-4xl"
-      >
-        About Me
+        >
+          About Me
+        </p>
       </article>
       {/* end header container */}
 
