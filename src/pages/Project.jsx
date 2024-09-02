@@ -70,12 +70,9 @@ export default function Project() {
   return (
     <section id="project" className="min-h-screen flex-col justify-between p-4">
       {/* title container */}
-      <article
-        className="text-white text-lg bg-cyan-950 bg-opacity-70 p-4 font-bold mt-20
-          lg:text-2xl
-          md:text-1xl
-          sm:text-1xl"
-      >
+      <article className="text-white text-2xl bg-cyan-950 bg-opacity-70 p-4 font-semibold
+      md:text-3xl
+      lg:text-4xl">
         Projects
       </article>
 

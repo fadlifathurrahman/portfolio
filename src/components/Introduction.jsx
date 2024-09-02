@@ -10,7 +10,7 @@ export default function Introduction() {
       className="min-h-screen flex flex-col justify-center items-center -mt-8"
       style={{ backgroundImage: `url(${background})`, backgroundSize: "cover" }}
     >
-      <article className="flex items-center justify-center gap-10 ">
+      <article className="flex items-center justify-center gap-5 mx-2">
         {/* salute container */}
         <article
           className="text-cyan-700 text-sm flex flex-col gap-2 font-semibold
@@ -35,7 +35,7 @@ export default function Introduction() {
           <img
             src={portrait}
             alt="Muhammad Fadli Fathurrahman"
-            className="md:hidden h-40 w-auto pt-3 pl-2 bg-slate-800 rounded-full z-10"
+            className="md:hidden h-32 w-auto pt-3 pl-2 bg-slate-800 rounded-full z-10"
           />
           {/* laptop size view */}
           <img
@@ -53,13 +53,15 @@ export default function Introduction() {
         <Contact />
 
         {/* location container */}
-        <div
-          className="text-slate-800 font-bold flex gap-3 items-center mt-3
+        <a
+        target="_blank"
+        href="https://maps.app.goo.gl/Ffa1zDjBtvAHuZwo6"
+          className="text-slate-800 font-bold flex gap-3 items-center mt-3 cursor-pointer
         "
         >
           <FaMapLocationDot size={28} />
           <p>Bandung, West Java, Indonesia</p>
-        </div>
+        </a>
         {/* end location container */}
       </article>
     </section>

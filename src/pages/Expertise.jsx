@@ -34,12 +34,11 @@ export default function Expertise() {
   return (
     // parent container
     <section id="today-i-learn" className="flex-col justify-between p-4 mt-20">
-      {/* title container */}
+      {/* header container */}
       <article
-        className="text-white text-lg bg-cyan-950 bg-opacity-70 p-4 font-bold mt-20
-          lg:text-2xl
-          md:text-1xl
-          sm:text-1xl"
+        className="text-white text-2xl bg-cyan-950 bg-opacity-70 p-4 font-semibold
+      md:text-3xl
+      lg:text-4xl"
       >
         Today I Learn
       </article>
@@ -54,7 +53,12 @@ export default function Expertise() {
           rounded-lg bg-slate-200 "
           >
             <img src={expertise.icon} className="w-7"></img>
-            <p className="text-sm font-semibold">{expertise.name}</p>
+            <p
+              className="text-sm font-semibold
+            md:text-lg"
+            >
+              {expertise.name}
+            </p>
           </div>
         ))}
       </article>

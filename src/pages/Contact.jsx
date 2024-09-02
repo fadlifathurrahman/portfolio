@@ -27,7 +27,7 @@ export default function Contact() {
   return (
     <div
       id="contact"
-      className="flex flex-col justify-end w-fit 
+      className="flex flex-col justify-end w-max 
        "
     >
       <div className="flex flex-row pt-3 justify-evenly items-end">
