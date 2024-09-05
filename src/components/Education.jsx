@@ -9,34 +9,9 @@ export default function Education() {
   const [showEducation, setShowEducation] = useState(false);
   const informalEducation = [
     {
-      title: "Logic and Algorithms with C Programming",
+      title: "Fullstack Web Development with React.js & Node.js (Express.js)",
       meetings: 16,
-      date: "September 2021 - January 2022",
-    },
-    {
-      title: "Data Structures with C Programming",
-      meetings: 16,
-      date: "February 2022 - June 2022",
-    },
-    {
-      title: "Database with MySQL",
-      meetings: 16,
-      date: "February 2022 - June 2022",
-    },
-    {
-      title: "Web Development with HTML, CSS, & JavaScript",
-      meetings: 16,
-      date: "July 2022 - September 2022",
-    },
-    {
-      title: "Java Fundamentals with Java Swing",
-      meetings: 16,
-      date: "September 2022 - January 2023",
-    },
-    {
-      title: "Advanced with Java Spring Boot",
-      meetings: 16,
-      date: "October 2022 - February 2023",
+      date: "March 2023 - July 2023",
     },
     {
       title: "GitHub",
@@ -44,9 +19,34 @@ export default function Education() {
       date: "February 2023",
     },
     {
-      title: "Fullstack Web Development with React.js & Node.js (Express.js)",
+      title: "Advanced with Java Spring Boot",
       meetings: 16,
-      date: "March 2023 - July 2023",
+      date: "October 2022 - February 2023",
+    },
+    {
+      title: "Java Fundamentals with Java Swing",
+      meetings: 16,
+      date: "September 2022 - January 2023",
+    },
+    {
+      title: "Web Development with HTML, CSS, & JavaScript",
+      meetings: 16,
+      date: "July 2022 - September 2022",
+    },
+    {
+      title: "Database with MySQL",
+      meetings: 16,
+      date: "February 2022 - June 2022",
+    },
+    {
+      title: "Data Structures with C Programming",
+      meetings: 16,
+      date: "February 2022 - June 2022",
+    },
+    {
+      title: "Logic and Algorithms with C Programming",
+      meetings: 16,
+      date: "September 2021 - January 2022",
     },
   ];
 
@@ -89,21 +89,21 @@ export default function Education() {
 
             {/* formal education content container */}
             <p className="text-base lg:text-lg text-justify indent-9">
-              Bachelor's student in Information Technology at{" "}
+              Bachelor's student in Informatics Engineering at{" "}
               <a
                 href="https://www.pasim.ac.id/"
                 className="text-sky-700 underline"
               >
                 Universitas Nasional Pasim
               </a>
-              , funded by the{" "}
+              , fully funded by the{" "}
               <a
                 href="https://www.pubpasim.org/"
                 className="text-sky-700 underline italic"
               >
                 Pemberdayaan Umat Berkelanjutan (PUB)
               </a>{" "}
-              Scholarship Program.
+              scholarship program.
             </p>
             {/* end formal education content container */}
           </div>

@@ -61,6 +61,14 @@ export default function Header() {
           <div className="flex flex-col items-center ">
             <a
               className={`px-4 py-5 w-full border-b-[0.5px] flex items-center gap-5 hover:bg-slate-700`}
+              href="#top"
+              onClick={toggleNav}
+            >
+              <RiContactsLine size={30} />
+              Contact
+            </a>
+            <a
+              className={`px-4 py-5 w-full border-b-[0.5px] flex items-center gap-5 hover:bg-slate-700`}
               href="#about-me"
             >
               <BsFileEarmarkPerson size={30} />
@@ -81,14 +89,6 @@ export default function Header() {
             >
               <MdOutlineTouchApp size={30} />
               Project
-            </a>
-            <a
-              className={`px-4 py-5 w-full border-b-[0.5px] flex items-center gap-5 hover:bg-slate-700`}
-              href="#top"
-              onClick={toggleNav}
-            >
-              <RiContactsLine size={30} />
-              Contact
             </a>
             <a
               className={`px-4 py-5 w-full border-b-[0.5px] flex items-center gap-5 hover:bg-slate-700`}

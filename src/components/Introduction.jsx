@@ -51,9 +51,7 @@ export default function Introduction() {
       {/* end salute & picture container */}
 
       {/* contact and location container */}
-      <article className="flex flex-col w-1/2 items-center mt-3 py-4">
-        <Contact />
-
+      <article className="flex gap-y-3 gap-x-3 flex-wrap justify-evenly w-full items-center mt-3 py-4">
         {/* location container */}
         <a
           target="_blank"
@@ -65,6 +63,9 @@ export default function Introduction() {
           <p>Bandung, West Java, Indonesia</p>
         </a>
         {/* end location container */}
+
+        <Contact />
+
       </article>
       {/* end contact and location container */}
     </section>

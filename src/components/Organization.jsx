@@ -8,19 +8,9 @@ export default function Organisation() {
   const [showOrganisation, setShowOrganisation] = useState(false);
   const organisationList = [
     {
-      title: "Logic and Algorithms with C Programming",
+      title: "Node.js",
       meetings: 16,
-      date: "September 2022 - January 2023",
-    },
-    {
-      title: "Data Structures with C Programming",
-      meetings: 16,
-      date: "February 2023 - June 2023",
-    },
-    {
-      title: "Database with MySQL",
-      meetings: 16,
-      date: "February 2023 - June 2023",
+      date: "August 2023 - December 2023",
     },
     {
       title: "Web Development with HTML, CSS, & JavaScript",
@@ -28,11 +18,22 @@ export default function Organisation() {
       date: "July 2023 - August 2023",
     },
     {
-      title: "Node.js",
+      title: "Database with MySQL",
       meetings: 16,
-      date: "August 2023 - December 2023",
+      date: "February 2023 - June 2023",
+    },
+    {
+      title: "Data Structures with C Programming",
+      meetings: 16,
+      date: "February 2023 - June 2023",
+    },
+    {
+      title: "Logic and Algorithms with C Programming",
+      meetings: 16,
+      date: "September 2022 - January 2023",
     },
   ];
+
   return (
     // parent container
     <article className="shadow-lg rounded-lg p-4 h-fit border">
@@ -68,7 +69,7 @@ export default function Organisation() {
 
           {/* organisation content */}
           <p className="text-base text-black lg:text-lg text-justify indent-9">
-          Lead Programming Training Division at{" "}
+            Lead Programming Training Division at{" "}
             <a
               href="https://www.pubpasim.org/"
               className="text-sky-700 underline italic"
@@ -79,7 +80,10 @@ export default function Organisation() {
           </p>
           <ul className="list-none list-inside mt-3 space-y-2 text-base lg:text-lg">
             {organisationList.map((item, index) => (
-              <li key={index} className="bg-white px-4 py-3 rounded-md hover:bg-slate-200">
+              <li
+                key={index}
+                className="bg-white px-4 py-3 rounded-md hover:bg-slate-200"
+              >
                 <p className="font-semibold text-black">{item.title}</p>
                 <p>{item.meetings} meetings</p>
                 <p>{item.date}</p>
