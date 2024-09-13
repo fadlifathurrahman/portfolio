@@ -150,14 +150,16 @@ export default function Header() {
             <a
               href="https://drive.google.com/file/d/1P-OxtP7xyIfDTduFpWAmJINFdVi9SWXV/view?usp=sharing"
               target="_blank"
+              rel="noreferrer"
               className="px-4 py-2 flex items-center border-y-2 text-gray-800 hover:bg-gray-200"
             >
               <img src={english} className="w-6 mr-2" />
               English
             </a>
             <a
-              href="https://drive.google.com/file/d/1P-OxtP7xyIfDTduFpWAmJINFdVi9SWXV/view?usp=sharing"
+              href="https://drive.google.com/file/d/18GkfCsQtlb7Iei2AKaBFOxYU0jjhH8y2/view?usp=sharing"
               target="_blank"
+              rel="noreferrer"
               className="px-4 py-2 flex items-center text-gray-800 hover:bg-gray-200"
             >
               <img src={indonesian} className="w-6 mr-2" />
