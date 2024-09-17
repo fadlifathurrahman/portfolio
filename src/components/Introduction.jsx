@@ -65,7 +65,7 @@ export default function Introduction() {
         </a>
         {/* end location container */}
 
-{/* contact */}
+        {/* contact */}
         <Contact />
 
       </article>
