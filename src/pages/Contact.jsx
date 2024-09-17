@@ -1,6 +1,5 @@
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { AiFillInstagram } from "react-icons/ai";
-import { Link } from "react-router-dom";
 import { HiOutlineMail } from "react-icons/hi";
 
 export default function Contact() {
@@ -37,17 +36,18 @@ export default function Contact() {
       {/* contact container */}
       <div className="">
         {connection.map((acc) => (
-          <Link
+          <a
             key={acc.id}
-            to={acc.link}
+            href={acc.link}
             target="_blank"
+            rel="noreferrer"
             className="text-gray-800 py-2 px-3 rounded-md
             flex gap-2
              hover:bg-gray-500 hover:text-white items-center"
           >
             {acc.icon}
             <p className="text-sm">{acc.username}</p>
-          </Link>
+          </a>
         ))}
       </div>
       {/* end contact container */}

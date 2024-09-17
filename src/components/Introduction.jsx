@@ -56,6 +56,7 @@ export default function Introduction() {
         <a
           target="_blank"
           href="https://maps.app.goo.gl/Ffa1zDjBtvAHuZwo6"
+          rel="noreferrer"
           className="text-slate-800 font-bold flex gap-3 items-center mt-3 cursor-pointer w-max
         "
         >
@@ -64,6 +65,7 @@ export default function Introduction() {
         </a>
         {/* end location container */}
 
+{/* contact */}
         <Contact />
 
       </article>
