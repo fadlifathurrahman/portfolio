@@ -14,7 +14,7 @@ import tailwindcss from "/assets/images/icons/tailwindcss.png";
 import github from "/assets/images/icons/github.png";
 import computer from "/assets/images/title-icons/computer.png";
 
-export const myExpertise = [
+ const myExpertise = [
   { id: 1, name: "C", icon: c },
   { id: 2, name: "C++", icon: cpp },
   { id: 3, name: "MySQL", icon: mysql },

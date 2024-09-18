@@ -39,7 +39,7 @@ export default function Contact() {
           <a
             key={acc.id}
             href={acc.link}
-            target="_blank"
+            target={acc.link === "#footer" ? "_self" : "_blank"}
             rel="noreferrer"
             className="text-gray-800 py-2 px-3 rounded-md
             flex gap-2
