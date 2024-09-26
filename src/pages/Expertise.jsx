@@ -14,6 +14,7 @@ import tailwindcss from "/assets/images/icons/tailwindcss.png";
 import github from "/assets/images/icons/github.png";
 import php from "/assets/images/icons/php.png";
 import bootstrap from "/assets/images/icons/bootstrap.png";
+import sass from "/assets/images/icons/sass.png";
 import computer from "/assets/images/title-icons/computer.png";
 
 export const myExpertise = [
@@ -33,6 +34,7 @@ export const myExpertise = [
   { id: 14, name: "GitHub", icon: github, },
   { id: 15, name: "PHP", icon: php, },
   { id: 16, name: "Bootstrap", icon: bootstrap, },
+  { id: 17, name: "SASS", icon: sass, },
 ];
 
 export default function Expertise() {
@@ -40,11 +42,11 @@ export default function Expertise() {
     // parent container
     <section id="today-i-learn" className="flex-col justify-between p-4 mt-20">
       {/* header container */}
-      <article className="flex items-end gap-5 bg-slate-300 bg-opacity-100 px-4 py-3">
+      <article className="flex items-end gap-5 bg-slate-500 bg-opacity-100 px-4 py-3">
         <img className="w-16 -mt-16
         md:w-20" src={computer} alt="" />
         <p
-          className="text-slate-800 font-bold text-3xl md:text-3xl
+          className="text-white font-bold text-3xl md:text-3xl
       lg:text-4xl"
         >
           Expertise

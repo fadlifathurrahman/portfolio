@@ -9,11 +9,11 @@ export default function AboutMe() {
     // parent container
     <section id="about-me" className="p-4 pt-20">
       {/* header container */}
-      <article className="flex items-end gap-5 bg-slate-300 bg-opacity-100 px-4 py-3">
+      <article className="flex items-end gap-5 bg-slate-500 bg-opacity-100 px-4 py-3">
         <img className="w-16 -mt-16
         md:w-20" src={aboutMe} alt="" />
         <p
-          className="text-slate-800 font-bold text-3xl md:text-3xl
+          className="text-white font-bold text-3xl md:text-3xl
       lg:text-4xl"
         >
           About Me

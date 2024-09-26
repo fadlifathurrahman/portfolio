@@ -16,9 +16,9 @@ export default function Header() {
     // parent container
     <header
       className={`w-full bg-slate-800 z-50 text-white
-        ${scroll ? "h-16 " : "h-20"}
+        ${scroll ? "h-16 shadow-2xl " : "h-24"}
         flex items-center justify-between px-6 sticky top-0 transition duration-300 ease-in-out
-        shadow-xl`}
+        shadow-2xl`}
     >
       {/* sidebar & icon */}
       <SideBar/>

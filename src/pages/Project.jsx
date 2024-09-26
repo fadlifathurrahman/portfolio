@@ -9,6 +9,7 @@ import berkahMart from "/assets/images/project-view/berkah-mart.png";
 import integerStore from "/assets/images/project-view/integer-store.png";
 import carubanTourism from "/assets/images/project-view/caruban-tourism.png";
 import dakotaRentalMobil from "/assets/images/project-view/dakota-rental-mobil.png";
+import visitJawaBarat from "/assets/images/project-view/visit-jawa-barat.png";
 import project from "/assets/images/title-icons/project.png";
 
 export default function Project() {
@@ -49,8 +50,7 @@ export default function Project() {
       name: "Integer Store",
       desc: "CRUD React project for React training Task",
       githubUrl: "https://github.com/fadlifathurrahman/integer-store.git",
-      demoUrl:
-        "https://integer-store-l4pdq0ao8-fadlifathurrahmans-projects.vercel.app/",
+      demoUrl: "https://integer-store-l4pdq0ao8-fadlifathurrahmans-projects.vercel.app/",
       view: integerStore,
       expertise: [myExpertise[6].id, myExpertise[11].id, myExpertise[12].id],
     },
@@ -60,12 +60,7 @@ export default function Project() {
       githubUrl: "https://github.com/fadlifathurrahman/tugas-react-4.git",
       demoUrl: "",
       view: carubanTourism,
-      expertise: [
-        myExpertise[2].id,
-        myExpertise[7].id,
-        myExpertise[11].id,
-        myExpertise[12].id,
-      ],
+      expertise: [myExpertise[2].id, myExpertise[7].id, myExpertise[11].id, myExpertise[12].id],
     },
     {
       name: "Dakota Rental Mobil",
@@ -73,10 +68,15 @@ export default function Project() {
       githubUrl: "https://github.com/fadlifathurrahman/dakota-rental",
       demoUrl: "",
       view: dakotaRentalMobil,
-      expertise: [
-        myExpertise[14].id,
-        myExpertise[15].id,
-      ],
+      expertise: [myExpertise[14].id, myExpertise[15].id],
+    },
+    {
+      name: "Visit Jawa Barat",
+      desc: "Tourism promotion website for West Java province",
+      githubUrl: "https://github.com/fadlifathurrahman/visit-jawa-barat",
+      demoUrl: "",
+      view: visitJawaBarat,
+      expertise: [myExpertise[3].id, myExpertise[4].id, myExpertise[15].id, myExpertise[16].id],
     },
   ];
 
@@ -84,7 +84,7 @@ export default function Project() {
     // parent container
     <section id="project" className="min-h-screen flex-col justify-between p-4">
       {/* header container */}
-      <article className="flex items-end gap-5 bg-slate-300 bg-opacity-100 px-4 py-3">
+      <article className="flex items-end gap-5 bg-slate-500 bg-opacity-100 px-4 py-3">
         <img
           className="w-16 -mt-16
         md:w-20"
@@ -92,7 +92,7 @@ export default function Project() {
           alt=""
         />
         <p
-          className="text-slate-800 font-bold text-3xl md:text-3xl
+          className="text-white font-bold text-3xl md:text-3xl
       lg:text-4xl"
         >
           Projects
@@ -104,19 +104,13 @@ export default function Project() {
       <article className="flex flex-wrap pt-5 gap-6 justify-center">
         {/* project iterator */}
         {myProject.map((project) => (
-          <div
-            key={project.name}
-            className="bg-slate-300 flex flex-col justify-between w-full sm:w-2/5 lg:w-1/4 px-4 py-4 gap-y-3 rounded-lg shadow-md"
-          >
+          <div key={project.name} className="bg-slate-300 flex flex-col justify-between w-full sm:w-2/5 lg:w-1/4 px-4 py-4 gap-y-3 rounded-lg shadow-md">
             <div className="flex flex-col gap-4">
               {/* project name */}
               <p className="text-lg font-bold text-center">{project.name}</p>
 
               {/* project image */}
-              <img
-                src={project.view}
-                className="w-full rounded-t-sm object-contain"
-              />
+              <img src={project.view} className="w-full rounded-t-sm object-contain" />
             </div>
 
             {/* project description */}
@@ -125,14 +119,8 @@ export default function Project() {
             {/* project expertise list with iterator */}
             <div className="flex flex-wrap gap-2 justify-center bg-slate-50 py-2 rounded-lg">
               {project.expertise.map((expertise) => (
-                <div
-                  key={myExpertise[expertise - 1].name}
-                  className="flex items-center rounded-lg min-w-max gap-2 py-2 px-3 bg-slate-300"
-                >
-                  <img
-                    src={myExpertise[expertise - 1].icon}
-                    className="h-4"
-                  ></img>
+                <div key={myExpertise[expertise - 1].name} className="flex items-center rounded-lg min-w-max gap-2 py-2 px-3 bg-slate-300">
+                  <img src={myExpertise[expertise - 1].icon} className="h-4"></img>
                   <p className="text-xs">{myExpertise[expertise - 1].name}</p>
                 </div>
               ))}
@@ -142,11 +130,7 @@ export default function Project() {
             {/* github & demo button */}
             <div className="flex justify-around w-full">
               {project.githubUrl && (
-                <Link
-                  to={project.githubUrl}
-                  target="_blank"
-                  className="text-cyan-700"
-                >
+                <Link to={project.githubUrl} target="_blank" className="text-cyan-700">
                   <button className="bg-sky-800 text-white py-2 w-[100px] rounded-md flex items-center justify-center gap-x-2 hover:bg-sky-600">
                     <BsGithub />
                     <p>Github</p>
@@ -154,11 +138,7 @@ export default function Project() {
                 </Link>
               )}
               {project.demoUrl && (
-                <Link
-                  to={project.demoUrl}
-                  target="_blank"
-                  className="text-cyan-700"
-                >
+                <Link to={project.demoUrl} target="_blank" className="text-cyan-700">
                   <button className="bg-sky-800 text-white py-2 w-[90px] rounded-md flex items-center justify-center gap-x-2 hover:bg-sky-600">
                     <MdPageview className="w-5" />
                     <p>Demo</p>
