@@ -8,6 +8,7 @@ import tiketGo from "/assets/images/project-view/tiketgo.png";
 import berkahMart from "/assets/images/project-view/berkah-mart.png";
 import integerStore from "/assets/images/project-view/integer-store.png";
 import carubanTourism from "/assets/images/project-view/caruban-tourism.png";
+import dakotaRentalMobil from "/assets/images/project-view/dakota-rental-mobil.png";
 import project from "/assets/images/title-icons/project.png";
 
 export default function Project() {
@@ -64,6 +65,17 @@ export default function Project() {
         myExpertise[7].id,
         myExpertise[11].id,
         myExpertise[12].id,
+      ],
+    },
+    {
+      name: "Dakota Rental Mobil",
+      desc: "Car rental website",
+      githubUrl: "https://github.com/fadlifathurrahman/dakota-rental",
+      demoUrl: "",
+      view: dakotaRentalMobil,
+      expertise: [
+        myExpertise[14].id,
+        myExpertise[15].id,
       ],
     },
   ];

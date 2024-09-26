@@ -12,6 +12,8 @@ import javaspringboot from "/assets/images/icons/javaspringboot.png";
 import reactjs from "/assets/images/icons/reactjs.png";
 import tailwindcss from "/assets/images/icons/tailwindcss.png";
 import github from "/assets/images/icons/github.png";
+import php from "/assets/images/icons/php.png";
+import bootstrap from "/assets/images/icons/bootstrap.png";
 import computer from "/assets/images/title-icons/computer.png";
 
 export const myExpertise = [
@@ -28,7 +30,9 @@ export const myExpertise = [
   { id: 11, name: "Java Spring Boot", icon: javaspringboot },
   { id: 12, name: "ReactJS", icon: reactjs },
   { id: 13, name: "TailwindCSS", icon: tailwindcss },
-  { id: 14, name: "GitHub", icon: github },
+  { id: 14, name: "GitHub", icon: github, },
+  { id: 15, name: "PHP", icon: php, },
+  { id: 16, name: "Bootstrap", icon: bootstrap, },
 ];
 
 export default function Expertise() {
