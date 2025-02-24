@@ -61,7 +61,7 @@ export default function Introduction() {
         "
         >
           <FaMapLocationDot size={28} />
-          <p>Bandung, West Java, Indonesia</p>
+          <p>Jakarta, Indonesia</p>
         </a>
         {/* end location container */}
 
